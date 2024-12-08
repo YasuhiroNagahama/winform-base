@@ -14,6 +14,13 @@ internal static class Program
         // see https://aka.ms/applicationconfiguration.
         ApplicationConfiguration.Initialize();
 
-        Application.Run(new BaseView());
+        Application.ThreadException += Application_ThreadException;
+
+        Application.Run(new TestView());
+    }
+
+    private static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
+    {
+        MessageBox.Show(e.Exception.Message, "システムエラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
     }
 }

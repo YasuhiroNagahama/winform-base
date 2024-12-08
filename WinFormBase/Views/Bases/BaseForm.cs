@@ -2,9 +2,9 @@
 
 namespace WinFormBase.Views;
 
-public abstract partial class BaseView : Form
+public partial class BaseView : Form
 {
-    protected BaseView()
+    public BaseView()
     {
         this.InitializeComponent();
     }
