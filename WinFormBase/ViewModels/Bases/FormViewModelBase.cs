@@ -1,22 +1,29 @@
-﻿namespace WinFormBase.ViewModels.Bases;
+﻿using WinFormBase.Services;
 
-public abstract class FormViewModelBase : ViewModelBase
+namespace WinFormBase.ViewModels.Bases;
+
+public abstract class FormViewModelBase(IMessageBoxService messageBoxService) : ViewModelBase
 {
-    private int _statusProgressValue = 0;
+    protected readonly IMessageBoxService _messageBoxService = messageBoxService;
+
+    public int GridSelectedIndex { get; set; }
+    public int DisplayGridIndex => this.GridSelectedIndex + 1;
+
+    private int _statusProgressValue;
     public int StatusProgressValue
     {
         get => this._statusProgressValue;
         set => this.SetProperty(ref this._statusProgressValue, value);
     }
 
-    private int _statusProgressMaximum = 0;
+    private int _statusProgressMaximum;
     public int StatusProgressMaximum
     {
         get => this._statusProgressMaximum;
         set => this.SetProperty(ref this._statusProgressMaximum, value);
     }
 
-    private int _statusProgressMinimum = 0;
+    private int _statusProgressMinimum;
     public int StatusProgressMinimum
     {
         get => this._statusProgressMinimum;

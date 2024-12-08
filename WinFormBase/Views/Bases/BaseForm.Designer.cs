@@ -55,13 +55,13 @@ partial class BaseView
         this.StatusLabel.Size = new Size(108, 25);
         this.StatusLabel.Text = "StatusLabel";
         // 
-        // BaseForm
+        // BaseView
         // 
         this.AutoScaleDimensions = new SizeF(7F, 15F);
         this.AutoScaleMode = AutoScaleMode.Font;
         this.ClientSize = new Size(800, 450);
         this.Controls.Add(this.statusStrip1);
-        this.Name = "BaseForm";
+        this.Name = "BaseView";
         this.Text = "WinFormBase";
         this.statusStrip1.ResumeLayout(false);
         this.statusStrip1.PerformLayout();
