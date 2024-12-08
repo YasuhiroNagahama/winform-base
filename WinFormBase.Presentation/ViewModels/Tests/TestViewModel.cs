@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using WinFormBase.Domain.Entities;
 using WinFormBase.WinForm.Services;
 using WinFormBase.WinForm.ViewModels.Bases;
 
@@ -8,8 +9,8 @@ public sealed class TestViewModel : FormViewModelBase
 {
     public readonly BindingList<TestGridViewModel> TestGridItems;
 
-    internal TestViewModel() : this(new MessageBoxService()) { }
-    public TestViewModel(IMessageBoxService messageBoxService) : base(messageBoxService)
+    internal TestViewModel() : this(new UserInfo() { UserName = "タケムラヤスヒロ", UserCode="999" }, new MessageBoxService()) { }
+    public TestViewModel(UserInfo userInfo, IMessageBoxService messageBoxService) : base(userInfo , messageBoxService)
     {
         this.StatusProgressVisible = true;
 
