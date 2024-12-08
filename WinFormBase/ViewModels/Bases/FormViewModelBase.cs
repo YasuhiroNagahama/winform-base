@@ -1,6 +1,6 @@
-﻿using WinFormBase.Services;
+﻿using WinFormBase.Presentation.Services;
 
-namespace WinFormBase.ViewModels.Bases;
+namespace WinFormBase.Presentation.ViewModels.Bases;
 
 public abstract class FormViewModelBase(IMessageBoxService messageBoxService) : ViewModelBase
 {

@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\WinFormBase.Domain\WinFormBase.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Controls\BindableToolStripProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>

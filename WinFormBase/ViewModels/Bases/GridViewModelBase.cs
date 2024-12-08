@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
-using WinFormBase.Services;
+using WinFormBase.Presentation.Services;
 
-namespace WinFormBase.ViewModels.Bases;
+namespace WinFormBase.Presentation.ViewModels.Bases;
 
 public abstract class GridViewModelBase<T>(int index, IMessageBoxService messageBoxService) : ViewModelBase where T : GridViewModelBase<T>
 {
