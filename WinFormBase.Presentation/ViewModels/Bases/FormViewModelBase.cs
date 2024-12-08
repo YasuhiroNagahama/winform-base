@@ -50,4 +50,11 @@ public abstract class FormViewModelBase(IMessageBoxService messageBoxService) : 
         get => this._statusLabelText;
         set => this.SetProperty(ref this._statusLabelText, value);
     }
+
+    private string _debugLabelText = String.Empty;
+    public string DebugStatusLabelText
+    {
+        get => this._debugLabelText;
+        set => this.SetProperty(ref _debugLabelText, value);
+    }
 }

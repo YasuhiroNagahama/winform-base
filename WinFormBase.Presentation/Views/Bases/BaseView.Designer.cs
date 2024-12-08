@@ -30,21 +30,22 @@ partial class BaseView
     /// </summary>
     private void InitializeComponent()
     {
-        this.statusStrip1 = new StatusStrip();
-        this.StatusProgress = new Controls.BindableToolStripProgressBar();
-        this.StatusLabel = new Controls.BindableToolStripStatusLabel();
-        this.statusStrip1.SuspendLayout();
+        this.BaseStatusStrip = new StatusStrip();
+        this.StatusProgress = new ToolStripProgressBar();
+        this.StatusLabel = new ToolStripStatusLabel();
+        this.DebugStatusLabel = new ToolStripStatusLabel();
+        this.BaseStatusStrip.SuspendLayout();
         this.SuspendLayout();
         // 
-        // statusStrip1
+        // BaseStatusStrip
         // 
-        this.statusStrip1.Font = new Font("Yu Gothic UI", 14F);
-        this.statusStrip1.Items.AddRange(new ToolStripItem[] { this.StatusProgress, this.StatusLabel });
-        this.statusStrip1.Location = new Point(0, 420);
-        this.statusStrip1.Name = "statusStrip1";
-        this.statusStrip1.Size = new Size(800, 30);
-        this.statusStrip1.TabIndex = 0;
-        this.statusStrip1.Text = "statusStrip1";
+        this.BaseStatusStrip.Font = new Font("Yu Gothic UI", 14F);
+        this.BaseStatusStrip.Items.AddRange(new ToolStripItem[] { this.StatusProgress, this.StatusLabel, this.DebugStatusLabel });
+        this.BaseStatusStrip.Location = new Point(0, 222);
+        this.BaseStatusStrip.Name = "BaseStatusStrip";
+        this.BaseStatusStrip.Size = new Size(598, 30);
+        this.BaseStatusStrip.TabIndex = 0;
+        this.BaseStatusStrip.Text = "BaseStatusStrip";
         // 
         // StatusProgress
         // 
@@ -57,23 +58,32 @@ partial class BaseView
         this.StatusLabel.Size = new Size(108, 25);
         this.StatusLabel.Text = "StatusLabel";
         // 
+        // DebugStatusLabel
+        // 
+        this.DebugStatusLabel.BackColor = Color.Red;
+        this.DebugStatusLabel.Name = "DebugStatusLabel";
+        this.DebugStatusLabel.RightToLeft = RightToLeft.No;
+        this.DebugStatusLabel.Size = new Size(113, 25);
+        this.DebugStatusLabel.Text = "DebugLabel";
+        // 
         // BaseView
         // 
         this.AutoScaleDimensions = new SizeF(7F, 15F);
         this.AutoScaleMode = AutoScaleMode.Font;
-        this.ClientSize = new Size(800, 450);
-        this.Controls.Add(this.statusStrip1);
+        this.ClientSize = new Size(598, 252);
+        this.Controls.Add(this.BaseStatusStrip);
         this.Name = "BaseView";
         this.Text = "WinFormBase";
-        this.statusStrip1.ResumeLayout(false);
-        this.statusStrip1.PerformLayout();
+        this.BaseStatusStrip.ResumeLayout(false);
+        this.BaseStatusStrip.PerformLayout();
         this.ResumeLayout(false);
         this.PerformLayout();
     }
 
     #endregion
 
-    private StatusStrip statusStrip1;
-    private BindableToolStripStatusLabel StatusLabel;
-    private BindableToolStripProgressBar StatusProgress;
+    private StatusStrip BaseStatusStrip;
+    private ToolStripProgressBar StatusProgress;
+    private ToolStripStatusLabel StatusLabel;
+    private ToolStripStatusLabel DebugStatusLabel;
 }

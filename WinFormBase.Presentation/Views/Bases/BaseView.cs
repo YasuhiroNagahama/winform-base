@@ -17,6 +17,11 @@ public partial class BaseView : Form
         this.StatusProgress.DataBindings.Add(nameof(StatusProgress.Style), viewModelBase, nameof(viewModelBase.StatusProgressStyle));
         this.StatusProgress.DataBindings.Add(nameof(StatusProgress.Visible), viewModelBase, nameof(viewModelBase.StatusProgressVisible));
 
-        this.StatusLabel.DataBindings.Add("Text", viewModelBase, nameof(viewModelBase.StatusLableText));
+        this.StatusLabel.DataBindings.Add(nameof(this.StatusLabel.Text), viewModelBase, nameof(viewModelBase.StatusLableText));
+        this.DebugStatusLabel.DataBindings.Add(nameof(this.DebugStatusLabel.Text), viewModelBase, nameof(viewModelBase.DebugStatusLabelText));
+
+#if DEBUG
+        viewModelBase.DebugStatusLabelText = "デバックモード";
+#endif
     }
 }
