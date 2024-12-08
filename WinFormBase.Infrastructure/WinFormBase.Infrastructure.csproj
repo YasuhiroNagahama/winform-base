@@ -9,7 +9,6 @@
   <ItemGroup>
     <Folder Include="Printer\" />
     <Folder Include="Barcode\" />
-    <Folder Include="File\" />
   </ItemGroup>
 
   <ItemGroup>
