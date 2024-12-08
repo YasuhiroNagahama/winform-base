@@ -48,4 +48,9 @@ public sealed class TestViewModel : FormViewModelBase
 
         this.TestGridItems.RemoveAt(this.GridSelectedIndex);
     }
+
+    protected override bool IsModifying()
+    {
+        throw new NotImplementedException();
+    }
 }

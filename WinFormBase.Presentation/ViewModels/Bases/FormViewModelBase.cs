@@ -61,4 +61,6 @@ public abstract class FormViewModelBase(UserInfo loggedInUser, IMessageBoxServic
         get => this._debugLabelText;
         set => this.SetProperty(ref this._debugLabelText, value);
     }
+
+    protected abstract bool IsModifying();
 }
