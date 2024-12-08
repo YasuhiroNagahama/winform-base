@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <Folder Include="Entities\" />
+    <Folder Include="StaticValues\" />
+    <Folder Include="Logincs\" />
   </ItemGroup>
 
 </Project>
