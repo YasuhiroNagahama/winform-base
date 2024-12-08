@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
@@ -9,9 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Update="Controls\BindableToolStripProgressBar.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Folder Include="Entities\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="ValueObjects\" />
   </ItemGroup>
 
 </Project>

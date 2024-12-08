@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel;
-using WinFormBase.Services;
-using WinFormBase.ViewModels.Bases;
+using WinFormBase.Presentation.Services;
+using WinFormBase.Presentation.ViewModels.Bases;
 
-namespace WinFormBase.ViewModels.Tests;
+namespace WinFormBase.Presentation.ViewModels.Tests;
 
 public sealed class TestGridViewModel(int index, IMessageBoxService messageBoxService) : GridViewModelBase<TestGridViewModel>(index, messageBoxService)
 {

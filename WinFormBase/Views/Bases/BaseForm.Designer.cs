@@ -1,4 +1,6 @@
-﻿namespace WinFormBase.Views;
+﻿using WinFormBase.Presentation.Controls;
+
+namespace WinFormBase.Presentation.Views.Bases;
 
 partial class BaseView
 {
@@ -72,6 +74,6 @@ partial class BaseView
     #endregion
 
     private StatusStrip statusStrip1;
-    private Controls.BindableToolStripStatusLabel StatusLabel;
-    private Controls.BindableToolStripProgressBar StatusProgress;
+    private BindableToolStripStatusLabel StatusLabel;
+    private BindableToolStripProgressBar StatusProgress;
 }

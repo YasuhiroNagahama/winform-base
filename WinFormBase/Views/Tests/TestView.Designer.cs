@@ -1,4 +1,4 @@
-﻿namespace WinFormBase.Views;
+﻿namespace WinFormBase.Presentation.Views.Tests;
 
 partial class TestView
 {

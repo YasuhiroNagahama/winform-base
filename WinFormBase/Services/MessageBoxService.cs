@@ -1,4 +1,4 @@
-﻿namespace WinFormBase.Services;
+﻿namespace WinFormBase.Presentation.Services;
 
 public sealed class MessageBoxService : IMessageBoxService
 {

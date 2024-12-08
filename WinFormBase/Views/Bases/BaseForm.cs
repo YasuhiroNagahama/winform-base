@@ -1,6 +1,6 @@
-﻿using WinFormBase.ViewModels.Bases;
+﻿using WinFormBase.Presentation.ViewModels.Bases;
 
-namespace WinFormBase.Views;
+namespace WinFormBase.Presentation.Views.Bases;
 
 public partial class BaseView : Form
 {

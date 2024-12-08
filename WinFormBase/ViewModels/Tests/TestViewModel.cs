@@ -1,9 +1,8 @@
 ﻿using System.ComponentModel;
-using WinFormBase.Services;
-using WinFormBase.Utilities;
-using WinFormBase.ViewModels.Bases;
+using WinFormBase.Presentation.Services;
+using WinFormBase.Presentation.ViewModels.Bases;
 
-namespace WinFormBase.ViewModels.Tests;
+namespace WinFormBase.Presentation.ViewModels.Tests;
 
 public sealed class TestViewModel : FormViewModelBase
 {
@@ -41,8 +40,7 @@ public sealed class TestViewModel : FormViewModelBase
 
     public void DeleteGridItem()
     {
-        if(UtilityHelper.TryGetValue(this.TestGridItems, this.GridSelectedIndex) is null ||
-           !this._messageBoxService.ShowWarning($"{this.DisplayGridIndex}行目を削除します。よろしいですか？"))
+        if (!this._messageBoxService.ShowWarning($"{this.DisplayGridIndex}行目を削除します。よろしいですか？"))
         {
             return;
         }
