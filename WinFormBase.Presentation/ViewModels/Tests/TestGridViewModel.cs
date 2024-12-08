@@ -21,4 +21,9 @@ public sealed class TestGridViewModel(int index, IMessageBoxService messageBoxSe
         get => this._userEmail;
         set => this.SetProperty(ref this._userEmail, value);
     }
+
+    public override bool IsModifying()
+    {
+        throw new NotImplementedException();
+    }
 }

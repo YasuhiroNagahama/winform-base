@@ -29,4 +29,6 @@ public abstract class GridViewModelBase<T>(int index, IMessageBoxService message
             currentIndex++;
         }
     }
+
+    public abstract bool IsModifying();
 }
