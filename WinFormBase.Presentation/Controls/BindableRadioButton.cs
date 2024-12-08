@@ -1,4 +1,4 @@
-﻿namespace WinFormBase.Presentation.Controls;
+﻿namespace WinFormBase.WinForm.Controls;
 
 public sealed class BindableRadioButton : RadioButton
 {

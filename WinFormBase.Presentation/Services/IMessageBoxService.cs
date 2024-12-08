@@ -1,4 +1,4 @@
-﻿namespace WinFormBase.Presentation.Services;
+﻿namespace WinFormBase.WinForm.Services;
 
 public interface IMessageBoxService
 {
