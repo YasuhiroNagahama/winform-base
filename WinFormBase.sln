@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormBase.Presentation", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormBase.Domain", "WinFormBase.Domain\WinFormBase.Domain.csproj", "{EEF8955F-6C7F-4562-9AD8-AF42DABBBC1A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormBase.Infrastructure", "WinFormBase.Infrastructure\WinFormBase.Infrastructure.csproj", "{832773CF-30D3-4168-9586-CC67F414C275}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{EEF8955F-6C7F-4562-9AD8-AF42DABBBC1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EEF8955F-6C7F-4562-9AD8-AF42DABBBC1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EEF8955F-6C7F-4562-9AD8-AF42DABBBC1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{832773CF-30D3-4168-9586-CC67F414C275}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{832773CF-30D3-4168-9586-CC67F414C275}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{832773CF-30D3-4168-9586-CC67F414C275}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{832773CF-30D3-4168-9586-CC67F414C275}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
