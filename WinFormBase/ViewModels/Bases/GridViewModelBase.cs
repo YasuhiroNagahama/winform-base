@@ -1,5 +1,5 @@
 ﻿namespace WinFormBase.ViewModels.Bases;
 
-public sealed class GridViewModelBase
+public abstract class GridViewModelBase : ViewModelBase
 {
 }
