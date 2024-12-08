@@ -1,6 +1,6 @@
-﻿using WinFormBase.Presentation.ViewModels.Bases;
+﻿using WinFormBase.WinForm.ViewModels.Bases;
 
-namespace WinFormBase.Presentation.Views.Bases;
+namespace WinFormBase.WinForm.Views.Bases;
 
 public partial class BaseView : Form
 {
@@ -17,6 +17,13 @@ public partial class BaseView : Form
         this.StatusProgress.DataBindings.Add(nameof(StatusProgress.Style), viewModelBase, nameof(viewModelBase.StatusProgressStyle));
         this.StatusProgress.DataBindings.Add(nameof(StatusProgress.Visible), viewModelBase, nameof(viewModelBase.StatusProgressVisible));
 
-        this.StatusLabel.DataBindings.Add("Text", viewModelBase, nameof(viewModelBase.StatusLableText));
+        this.StatusLabel.DataBindings.Add(nameof(this.StatusLabel.Text), viewModelBase, nameof(viewModelBase.StatusLableText));
+
+        this.UserInfoStatusLabel.DataBindings.Add(nameof(this.UserInfoStatusLabel.Text), viewModelBase, nameof(viewModelBase.UserInfoLableText));
+
+#if DEBUG
+        this.DebugModeStatusLabel.DataBindings.Add(nameof(this.DebugModeStatusLabel.Text), viewModelBase, nameof(viewModelBase.DebugModelStatusLabelText));
+        viewModelBase.DebugModelStatusLabelText = "デバックモード";
+#endif
     }
 }

@@ -1,9 +1,11 @@
-﻿using WinFormBase.Presentation.Services;
+﻿using WinFormBase.Domain.Entities;
+using WinFormBase.WinForm.Services;
 
-namespace WinFormBase.Presentation.ViewModels.Bases;
+namespace WinFormBase.WinForm.ViewModels.Bases;
 
-public abstract class FormViewModelBase(IMessageBoxService messageBoxService) : ViewModelBase
+public abstract class FormViewModelBase(UserInfo loggedInUser, IMessageBoxService messageBoxService) : ViewModelBase
 {
+    protected readonly UserInfo _loggedInUser = loggedInUser;
     protected readonly IMessageBoxService _messageBoxService = messageBoxService;
 
     public int GridSelectedIndex { get; set; }
@@ -49,5 +51,14 @@ public abstract class FormViewModelBase(IMessageBoxService messageBoxService) : 
     {
         get => this._statusLabelText;
         set => this.SetProperty(ref this._statusLabelText, value);
+    }
+
+    public string UserInfoLableText => $"ユーザー名 : {this._loggedInUser.UserName}";
+
+    private string _debugLabelText = String.Empty;
+    public string DebugModelStatusLabelText
+    {
+        get => this._debugLabelText;
+        set => this.SetProperty(ref this._debugLabelText, value);
     }
 }

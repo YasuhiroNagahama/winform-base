@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormBase.Infrastructure"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormBase.Domain", "WinFormBase.Domain\WinFormBase.Domain.csproj", "{321D4E07-7CF3-431D-BE1C-53EF60D10FEC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormBase.Presentation", "WinFormBase.Presentation\WinFormBase.Presentation.csproj", "{1449092D-60E4-4883-9D6C-9191483BF29C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormBase.WinForm", "WinFormBase.Presentation\WinFormBase.WinForm.csproj", "{1449092D-60E4-4883-9D6C-9191483BF29C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

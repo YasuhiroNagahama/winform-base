@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms.Design;
 
-namespace WinFormBase.Presentation.Controls;
+namespace WinFormBase.WinForm.Controls;
 
 [ToolStripItemDesignerAvailability(ToolStripItemDesignerAvailability.StatusStrip)]
 public class BindableToolStripStatusLabel : ToolStripStatusLabel, IBindableComponent

@@ -1,7 +1,7 @@
-﻿using WinFormBase.Presentation.Utilities;
-using WinFormBase.Presentation.Views.Tests;
+﻿using WinFormBase.WinForm.Utilities;
+using WinFormBase.WinForm.Views.Tests;
 
-namespace WinFormBase.Presentation;
+namespace WinFormBase.WinForm;
 
 internal static class Program
 {

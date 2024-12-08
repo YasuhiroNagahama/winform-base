@@ -1,15 +1,16 @@
 ﻿using System.ComponentModel;
-using WinFormBase.Presentation.Services;
-using WinFormBase.Presentation.ViewModels.Bases;
+using WinFormBase.Domain.Entities;
+using WinFormBase.WinForm.Services;
+using WinFormBase.WinForm.ViewModels.Bases;
 
-namespace WinFormBase.Presentation.ViewModels.Tests;
+namespace WinFormBase.WinForm.ViewModels.Tests;
 
 public sealed class TestViewModel : FormViewModelBase
 {
     public readonly BindingList<TestGridViewModel> TestGridItems;
 
-    internal TestViewModel() : this(new MessageBoxService()) { }
-    public TestViewModel(IMessageBoxService messageBoxService) : base(messageBoxService)
+    internal TestViewModel() : this(new UserInfo() { UserName = "タケムラヤスヒロ", UserCode="999" }, new MessageBoxService()) { }
+    public TestViewModel(UserInfo userInfo, IMessageBoxService messageBoxService) : base(userInfo , messageBoxService)
     {
         this.StatusProgressVisible = true;
 

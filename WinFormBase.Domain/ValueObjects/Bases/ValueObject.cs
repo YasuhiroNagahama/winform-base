@@ -23,9 +23,10 @@ public abstract class ValueObject<T> where T : ValueObject<T>
     }
 
     protected abstract bool EqualsCore(T? other);
+    protected abstract int GetHashCodeCore();
 
     public override int GetHashCode()
     {
-        return base.GetHashCode();
+        return this.GetHashCodeCore();
     }
 }

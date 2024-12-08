@@ -1,6 +1,6 @@
 ﻿using WinFormBase.Domain.Exceptions.Bases;
 
-namespace WinFormBase.Presentation.Utilities;
+namespace WinFormBase.WinForm.Utilities;
 
 public static class ExceptionHandler
 {

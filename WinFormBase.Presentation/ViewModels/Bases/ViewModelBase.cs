@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace WinFormBase.Presentation.ViewModels.Bases;
+namespace WinFormBase.WinForm.ViewModels.Bases;
 
 public abstract class ViewModelBase : INotifyPropertyChanged
 {

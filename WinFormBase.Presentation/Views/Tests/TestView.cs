@@ -1,7 +1,7 @@
-﻿using WinFormBase.Presentation.ViewModels.Tests;
-using WinFormBase.Presentation.Views.Bases;
+﻿using WinFormBase.WinForm.ViewModels.Tests;
+using WinFormBase.WinForm.Views.Bases;
 
-namespace WinFormBase.Presentation.Views.Tests;
+namespace WinFormBase.WinForm.Views.Tests;
 
 public partial class TestView : BaseView
 {
