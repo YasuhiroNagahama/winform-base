@@ -1,6 +1,7 @@
-﻿using WinFormBase.Views;
+﻿using WinFormBase.Presentation.Handlers;
+using WinFormBase.Presentation.Views.Tests;
 
-namespace WinFormBase;
+namespace WinFormBase.Presentation;
 
 internal static class Program
 {
@@ -14,13 +15,8 @@ internal static class Program
         // see https://aka.ms/applicationconfiguration.
         ApplicationConfiguration.Initialize();
 
-        Application.ThreadException += Application_ThreadException;
+        Application.ThreadException += ExceptionHandler.HandleException;
 
         Application.Run(new TestView());
-    }
-
-    private static void Application_ThreadException(object sender, ThreadExceptionEventArgs e)
-    {
-        MessageBox.Show(e.Exception.Message, "システムエラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
     }
 }
