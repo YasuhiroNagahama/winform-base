@@ -26,4 +26,22 @@ public partial class BaseView : Form
         viewModelBase.DebugModelStatusLabelText = "デバックモード";
 #endif
     }
+
+    protected void InitializeDataGridView(DataGridView dataGridView, FormViewModelBase gridViewModel)
+    {
+        dataGridView.CurrentCellChanged += (_, __) =>
+        {
+            gridViewModel.GridSelectedIndex =
+            dataGridView.CurrentRow == null
+            ? -1
+            : dataGridView.CurrentRow.Index;
+        };
+    }
+
+    protected void ShowPrintDialog()
+    {
+        PrintDialog printDialog = new();
+
+        printDialog.ShowDialog();
+    }
 }
