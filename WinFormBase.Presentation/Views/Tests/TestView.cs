@@ -14,14 +14,18 @@ public partial class TestView : BaseView
 
         this.Bind(this._viewModel);
 
+        /* ----- ToolStripMenuItem ----- */
+        this.PrinterSettingMenuItem.Click += (_, __) => this.ShowPrintDialog();
+        /* ---------- */
+
         /* ----- DataGridViewGroup ----- */
+
+        this.InitializeDataGridView(this.TestDataGrid, this._viewModel);
 
         this.TestDataGrid.DataSource = this._viewModel.TestGridItems;
         this.TestDataGrid.Columns[nameof(TestGridViewModel.DisplayIndex)].DisplayIndex = 0;
         this.TestDataGrid.Columns[nameof(TestGridViewModel.UserName)].DataPropertyName = nameof(TestGridViewModel.UserName);
         this.TestDataGrid.Columns[nameof(TestGridViewModel.UserEmail)].DataPropertyName = nameof(TestGridViewModel.UserEmail);
-
-        this.TestDataGrid.SelectionChanged += (_, __) => this._viewModel.GridSelectedIndex = this.TestDataGrid.CurrentRow.Index;
 
         this.AddRowButton.Click += (_, __) => this._viewModel.AddGridItem();
         this.DeleteButton.Click += (_, __) => this._viewModel.DeleteGridItem();

@@ -33,12 +33,16 @@ partial class TestView
         this.StatusLableChangeButton = new Button();
         this.ProgressGroupBox = new GroupBox();
         this.DataGridViewGroup = new GroupBox();
-        this.TestDataGrid = new DataGridView();
-        this.AddRowButton = new Button();
         this.DeleteButton = new Button();
+        this.AddRowButton = new Button();
+        this.TestDataGrid = new DataGridView();
+        this.menuStrip1 = new MenuStrip();
+        this.SettingMenuItem = new ToolStripMenuItem();
+        this.PrinterSettingMenuItem = new ToolStripMenuItem();
         this.ProgressGroupBox.SuspendLayout();
         this.DataGridViewGroup.SuspendLayout();
         ((System.ComponentModel.ISupportInitialize)this.TestDataGrid).BeginInit();
+        this.menuStrip1.SuspendLayout();
         this.SuspendLayout();
         // 
         // ProgressManualButton
@@ -88,31 +92,12 @@ partial class TestView
         this.DataGridViewGroup.Controls.Add(this.DeleteButton);
         this.DataGridViewGroup.Controls.Add(this.AddRowButton);
         this.DataGridViewGroup.Controls.Add(this.TestDataGrid);
-        this.DataGridViewGroup.Location = new Point(12, 12);
+        this.DataGridViewGroup.Location = new Point(12, 76);
         this.DataGridViewGroup.Name = "DataGridViewGroup";
         this.DataGridViewGroup.Size = new Size(488, 254);
         this.DataGridViewGroup.TabIndex = 5;
         this.DataGridViewGroup.TabStop = false;
         this.DataGridViewGroup.Text = "DataGridViewGroup";
-        // 
-        // dataGridView1
-        // 
-        this.TestDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-        this.TestDataGrid.Dock = DockStyle.Top;
-        this.TestDataGrid.Location = new Point(3, 19);
-        this.TestDataGrid.Name = "dataGridView1";
-        this.TestDataGrid.Size = new Size(482, 187);
-        this.TestDataGrid.TabIndex = 0;
-        // 
-        // AddRowButton
-        // 
-        this.AddRowButton.Font = new Font("Yu Gothic UI", 14F);
-        this.AddRowButton.Location = new Point(6, 212);
-        this.AddRowButton.Name = "AddRowButton";
-        this.AddRowButton.Size = new Size(135, 33);
-        this.AddRowButton.TabIndex = 1;
-        this.AddRowButton.Text = "追加";
-        this.AddRowButton.UseVisualStyleBackColor = true;
         // 
         // DeleteButton
         // 
@@ -124,6 +109,48 @@ partial class TestView
         this.DeleteButton.Text = "削除";
         this.DeleteButton.UseVisualStyleBackColor = true;
         // 
+        // AddRowButton
+        // 
+        this.AddRowButton.Font = new Font("Yu Gothic UI", 14F);
+        this.AddRowButton.Location = new Point(6, 212);
+        this.AddRowButton.Name = "AddRowButton";
+        this.AddRowButton.Size = new Size(135, 33);
+        this.AddRowButton.TabIndex = 1;
+        this.AddRowButton.Text = "追加";
+        this.AddRowButton.UseVisualStyleBackColor = true;
+        // 
+        // TestDataGrid
+        // 
+        this.TestDataGrid.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+        this.TestDataGrid.Dock = DockStyle.Top;
+        this.TestDataGrid.Location = new Point(3, 19);
+        this.TestDataGrid.Name = "TestDataGrid";
+        this.TestDataGrid.Size = new Size(482, 187);
+        this.TestDataGrid.TabIndex = 0;
+        // 
+        // menuStrip1
+        // 
+        this.menuStrip1.Font = new Font("Yu Gothic UI", 14F);
+        this.menuStrip1.Items.AddRange(new ToolStripItem[] { this.SettingMenuItem });
+        this.menuStrip1.Location = new Point(0, 0);
+        this.menuStrip1.Name = "menuStrip1";
+        this.menuStrip1.Size = new Size(1165, 33);
+        this.menuStrip1.TabIndex = 6;
+        this.menuStrip1.Text = "menuStrip1";
+        // 
+        // SettingMenuItem
+        // 
+        this.SettingMenuItem.DropDownItems.AddRange(new ToolStripItem[] { this.PrinterSettingMenuItem });
+        this.SettingMenuItem.Name = "SettingMenuItem";
+        this.SettingMenuItem.Size = new Size(84, 29);
+        this.SettingMenuItem.Text = "設定(&S)";
+        // 
+        // PrinterSettingMenuItem
+        // 
+        this.PrinterSettingMenuItem.Name = "PrinterSettingMenuItem";
+        this.PrinterSettingMenuItem.Size = new Size(211, 30);
+        this.PrinterSettingMenuItem.Text = "プリンター設定(&P)";
+        // 
         // TestView
         // 
         this.AutoScaleDimensions = new SizeF(7F, 15F);
@@ -131,13 +158,18 @@ partial class TestView
         this.ClientSize = new Size(1165, 602);
         this.Controls.Add(this.DataGridViewGroup);
         this.Controls.Add(this.ProgressGroupBox);
+        this.Controls.Add(this.menuStrip1);
+        this.MainMenuStrip = this.menuStrip1;
         this.Name = "TestView";
         this.Text = "TestView";
+        this.Controls.SetChildIndex(this.menuStrip1, 0);
         this.Controls.SetChildIndex(this.ProgressGroupBox, 0);
         this.Controls.SetChildIndex(this.DataGridViewGroup, 0);
         this.ProgressGroupBox.ResumeLayout(false);
         this.DataGridViewGroup.ResumeLayout(false);
         ((System.ComponentModel.ISupportInitialize)this.TestDataGrid).EndInit();
+        this.menuStrip1.ResumeLayout(false);
+        this.menuStrip1.PerformLayout();
         this.ResumeLayout(false);
         this.PerformLayout();
     }
@@ -152,4 +184,7 @@ partial class TestView
     private DataGridView TestDataGrid;
     private Button DeleteButton;
     private Button AddRowButton;
+    private MenuStrip menuStrip1;
+    private ToolStripMenuItem SettingMenuItem;
+    private ToolStripMenuItem PrinterSettingMenuItem;
 }
