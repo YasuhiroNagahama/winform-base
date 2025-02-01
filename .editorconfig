@@ -133,12 +133,12 @@ csharp_style_expression_bodied_properties = true  ## プロパティの `get` �
 #### 12. パターンマッチングの設定 ####
 #################################
 
-csharp_style_pattern_matching_over_as_with_null_check = true  ## `as` キャスト後の `null` チェックよりも `is` パターンマッチングを推奨
-csharp_style_pattern_matching_over_is_with_cast_check = true  ## `is` チェック後のキャストよりも `is` パターンマッチングを推奨
-csharp_style_prefer_extended_property_pattern = true  ## 拡張プロパティパターンを推奨
-csharp_style_prefer_not_pattern = true  ## `!(x is int)` の代わりに `x is not int` を推奨
-csharp_style_prefer_pattern_matching = true  ## 可能な場合は `switch` 文ではなく `switch` 式を使用
-csharp_style_prefer_switch_expression = true  ## `switch` 文の代わりに `switch` 式を推奨
+csharp_style_pattern_matching_over_as_with_null_check = true:suggestion## `as` キャスト後の `null` チェックよりも `is` パターンマッチングを推奨
+csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion## `is` チェック後のキャストよりも `is` パターンマッチングを推奨
+csharp_style_prefer_extended_property_pattern = true:suggestion## 拡張プロパティパターンを推奨
+csharp_style_prefer_not_pattern = true:suggestion## `!(x is int)` の代わりに `x is not int` を推奨
+csharp_style_prefer_pattern_matching = true:silent## 可能な場合は `switch` 文ではなく `switch` 式を使用
+csharp_style_prefer_switch_expression = true:suggestion## `switch` 文の代わりに `switch` 式を推奨
 
 #################################
 #### 13. Null チェックの設定 ####
@@ -163,13 +163,13 @@ csharp_style_prefer_readonly_struct_member = require  ## `readonly` をメンバ
 #### 15. コードブロックの設定 ####
 #################################
 
-csharp_prefer_braces = true  ## `if` や `for` などのブロックには必ず `{}` を付ける（単行でも省略しない）
-csharp_prefer_simple_using_statement = false  ## `using` はブロック `{}` を付ける形を推奨
-csharp_prefer_system_threading_lock = true  ## `lock (obj) {}` の代わりに `Monitor.Enter()` ではなく `lock` キーワードを使用
+csharp_prefer_braces = true:silent## `if` や `for` などのブロックには必ず `{}` を付ける（単行でも省略しない）
+csharp_prefer_simple_using_statement = false:suggestion## `using` はブロック `{}` を付ける形を推奨
+csharp_prefer_system_threading_lock = true:suggestion## `lock (obj) {}` の代わりに `Monitor.Enter()` ではなく `lock` キーワードを使用
 csharp_style_namespace_declarations = file_scoped:suggestion  ## 名前空間を `namespace X;` 形式にすることを推奨（ファイルスコープ）
 csharp_style_prefer_method_group_conversion = true  ## `x => x.DoSomething()` の代わりに `DoSomething` メソッドグループを推奨
-csharp_style_prefer_primary_constructors = true  ## C# 12 のプライマリコンストラクタ（`class Sample(int id) {}`）を推奨
-csharp_style_prefer_top_level_statements = true  ## トップレベルステートメントを推奨（`Main` メソッドなしの C# スクリプト形式）
+csharp_style_prefer_primary_constructors = true:suggestion## C# 12 のプライマリコンストラクタ（`class Sample(int id) {}`）を推奨
+csharp_style_prefer_top_level_statements = true:silent## トップレベルステートメントを推奨（`Main` メソッドなしの C# スクリプト形式）
 
 #################################
 #### 16. 式レベルの設定 ####
@@ -226,7 +226,7 @@ csharp_indent_block_contents = true  ## `{}` 内のブロックの内容をイ�
 csharp_indent_braces = false  ## `{}` のインデントをしない
 csharp_indent_case_contents = true  ## `case` の内容をインデントする
 csharp_indent_case_contents_when_block = true  ## `case` に `{}` がある場合もインデントする
-csharp_indent_labels = one_less_than_current  ## ラベル (`case`, `default`) は 1 レベル上のインデントに配置
+csharp_indent_labels = one_less_than_current## ラベル (`case`, `default`) は 1 レベル上のインデントに配置
 csharp_indent_switch_labels = true  ## `switch` 文の `case` ラベルをインデントする
 
 #################################
@@ -268,87 +268,87 @@ csharp_preserve_single_line_statements = true  ## 1行のステートメント�
 #################################
 
 # **プライベート静的フィールド**
-dotnet_naming_rule.private_static_field_should_be_begins_with_s_.severity = suggestion  ## プライベート静的フィールドのプレフィックスを `s_` にすることを推奨
+dotnet_naming_rule.private_static_field_should_be_begins_with_s_.severity = suggestion
 dotnet_naming_rule.private_static_field_should_be_begins_with_s_.symbols = private_static_field
 dotnet_naming_rule.private_static_field_should_be_begins_with_s_.style = begins_with_s_
 
 # **プライベートフィールド**
-dotnet_naming_rule.private_field_should_be_begins_with__.severity = suggestion  ## プライベートフィールドのプレフィックスを `_` にすることを推奨
+dotnet_naming_rule.private_field_should_be_begins_with__.severity = suggestion
 dotnet_naming_rule.private_field_should_be_begins_with__.symbols = private_field
 dotnet_naming_rule.private_field_should_be_begins_with__.style = begins_with__
 
 # **メソッドパラメータ**
-dotnet_naming_rule.parameters_should_be_camel_case.severity = suggestion  ## メソッドのパラメータ名は `camelCase` にすることを推奨
+dotnet_naming_rule.parameters_should_be_camel_case.severity = suggestion
 dotnet_naming_rule.parameters_should_be_camel_case.symbols = parameters
 dotnet_naming_rule.parameters_should_be_camel_case.style = camel_case
 
 # **ローカル変数**
-dotnet_naming_rule.local_variable_should_be_camel_case.severity = suggestion  ## ローカル変数名は `camelCase` にすることを推奨
+dotnet_naming_rule.local_variable_should_be_camel_case.severity = suggestion
 dotnet_naming_rule.local_variable_should_be_camel_case.symbols = local_variable
 dotnet_naming_rule.local_variable_should_be_camel_case.style = camel_case
 
 # **インターフェース**
-dotnet_naming_rule.interface_should_be_begins_with_i.severity = suggestion  ## インターフェース名は `I` をプレフィックスとすることを推奨
+dotnet_naming_rule.interface_should_be_begins_with_i.severity = suggestion
 dotnet_naming_rule.interface_should_be_begins_with_i.symbols = interface
 dotnet_naming_rule.interface_should_be_begins_with_i.style = begins_with_i
 
 # **クラス**
-dotnet_naming_rule.class_should_be_pascal_case.severity = suggestion  ## クラス名は `PascalCase` にすることを推奨
+dotnet_naming_rule.class_should_be_pascal_case.severity = suggestion
 dotnet_naming_rule.class_should_be_pascal_case.symbols = class
 dotnet_naming_rule.class_should_be_pascal_case.style = pascal_case
 
 # **構造体**
-dotnet_naming_rule.struct_should_be_pascal_case.severity = suggestion  ## 構造体名は `PascalCase` にすることを推奨
+dotnet_naming_rule.struct_should_be_pascal_case.severity = suggestion
 dotnet_naming_rule.struct_should_be_pascal_case.symbols = struct
 dotnet_naming_rule.struct_should_be_pascal_case.style = pascal_case
 
 # **列挙型**
-dotnet_naming_rule.enum_should_be_pascal_case.severity = suggestion  ## 列挙型の名前は `PascalCase` にすることを推奨
+dotnet_naming_rule.enum_should_be_pascal_case.severity = suggestion
 dotnet_naming_rule.enum_should_be_pascal_case.symbols = enum
 dotnet_naming_rule.enum_should_be_pascal_case.style = pascal_case
 
 # **デリゲート**
-dotnet_naming_rule.delegate_should_be_pascal_case.severity = suggestion  ## デリゲートの名前は `PascalCase` にすることを推奨
+dotnet_naming_rule.delegate_should_be_pascal_case.severity = suggestion
 dotnet_naming_rule.delegate_should_be_pascal_case.symbols = delegate
 dotnet_naming_rule.delegate_should_be_pascal_case.style = pascal_case
 
 # **イベント**
-dotnet_naming_rule.event_should_be_pascal_case.severity = suggestion  ## イベントの名前は `PascalCase` にすることを推奨
+dotnet_naming_rule.event_should_be_pascal_case.severity = suggestion
 dotnet_naming_rule.event_should_be_pascal_case.symbols = event
 dotnet_naming_rule.event_should_be_pascal_case.style = pascal_case
 
 # **メソッド**
-dotnet_naming_rule.method_should_be_pascal_case.severity = suggestion  ## メソッドの名前は `PascalCase` にすることを推奨
+dotnet_naming_rule.method_should_be_pascal_case.severity = suggestion
 dotnet_naming_rule.method_should_be_pascal_case.symbols = method
 dotnet_naming_rule.method_should_be_pascal_case.style = pascal_case
 
 # **プライベートメソッド**
-dotnet_naming_rule.private_method_should_be_pascal_case.severity = suggestion  ## プライベートメソッドの名前も `PascalCase` にすることを推奨
+dotnet_naming_rule.private_method_should_be_pascal_case.severity = suggestion
 dotnet_naming_rule.private_method_should_be_pascal_case.symbols = private_method
 dotnet_naming_rule.private_method_should_be_pascal_case.style = pascal_case
 
 # **抽象メソッド**
-dotnet_naming_rule.abstract_method_should_be_pascal_case.severity = suggestion  ## 抽象メソッドの名前は `PascalCase` にすることを推奨
+dotnet_naming_rule.abstract_method_should_be_pascal_case.severity = suggestion
 dotnet_naming_rule.abstract_method_should_be_pascal_case.symbols = abstract_method
 dotnet_naming_rule.abstract_method_should_be_pascal_case.style = pascal_case
 
 # **静的メソッド**
-dotnet_naming_rule.static_method_should_be_pascal_case.severity = suggestion  ## 静的メソッドの名前は `PascalCase` にすることを推奨
+dotnet_naming_rule.static_method_should_be_pascal_case.severity = suggestion
 dotnet_naming_rule.static_method_should_be_pascal_case.symbols = static_method
 dotnet_naming_rule.static_method_should_be_pascal_case.style = pascal_case
 
 # **プロパティ**
-dotnet_naming_rule.property_should_be_pascal_case.severity = suggestion  ## プロパティ名は `PascalCase` にすることを推奨
+dotnet_naming_rule.property_should_be_pascal_case.severity = suggestion
 dotnet_naming_rule.property_should_be_pascal_case.symbols = property
 dotnet_naming_rule.property_should_be_pascal_case.style = pascal_case
 
 # **パブリックまたはプロテクトなフィールド**
-dotnet_naming_rule.public_or_protected_field_should_be_pascal_case.severity = suggestion  ## `public/protected` フィールドは `PascalCase` にすることを推奨
+dotnet_naming_rule.public_or_protected_field_should_be_pascal_case.severity = suggestion
 dotnet_naming_rule.public_or_protected_field_should_be_pascal_case.symbols = public_or_protected_field
 dotnet_naming_rule.public_or_protected_field_should_be_pascal_case.style = pascal_case
 
 # **静的フィールド**
-dotnet_naming_rule.static_field_should_be_pascal_case.severity = suggestion  ## 静的フィールドは `PascalCase` にすることを推奨
+dotnet_naming_rule.static_field_should_be_pascal_case.severity = suggestion
 dotnet_naming_rule.static_field_should_be_pascal_case.symbols = static_field
 dotnet_naming_rule.static_field_should_be_pascal_case.style = pascal_case
 
@@ -481,3 +481,19 @@ dotnet_naming_style.begins_with_s_.capitalization = camel_case  ## `camelCase`�
 dotnet_style_explicit_nullable_type = true  ## `?` を使用して null 許容型を明示的に記述する
 dotnet_style_prefer_nameof_expression = true  ## `"MyMethod"` の代わりに `nameof(MyMethod)` を推奨
 dotnet_style_prefer_collection_expression = always  ## `{}` を使ってコレクションを初期化
+csharp_space_around_binary_operators = before_and_after
+csharp_style_conditional_delegate_call = true:suggestion
+csharp_style_prefer_method_group_conversion = true:silent
+[*.{cs,vb}]
+tab_width = 4
+indent_size = 4
+dotnet_style_operator_placement_when_wrapping = beginning_of_line
+dotnet_style_qualification_for_field = true:suggestion
+dotnet_style_qualification_for_property = true:suggestion
+dotnet_style_qualification_for_method = true:suggestion
+dotnet_style_qualification_for_event = true:suggestion
+dotnet_style_parentheses_in_arithmetic_binary_operators = always_for_clarity:silent
+dotnet_style_parentheses_in_other_binary_operators = always_for_clarity:silent
+dotnet_style_parentheses_in_relational_binary_operators = always_for_clarity:silent
+dotnet_style_parentheses_in_other_operators = never_if_unnecessary:silent
+dotnet_code_quality_unused_parameters = non_public:suggestion
