@@ -3,16 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35521.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.Infrastructure", "WinFormBase.Infrastructure\Base.Infrastructure.csproj", "{832773CF-30D3-4168-9586-CC67F414C275}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.Domain", "WinFormBase.Domain\Base.Domain.csproj", "{321D4E07-7CF3-431D-BE1C-53EF60D10FEC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base.WinForm", "WinFormBase.Presentation\Base.WinForm.csproj", "{1449092D-60E4-4883-9D6C-9191483BF29C}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{962DE311-1E83-4952-A876-D5258232CE22}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsharpBase.Domain", "CsharpBase.Domain\CsharpBase.Domain.csproj", "{E85A54A6-93BE-4AB6-A623-E3441E144228}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsharpBase.WinForm", "CsharpBase.WinForm\CsharpBase.WinForm.csproj", "{81191761-B7D1-4A8D-983E-76C8DC41529D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsharpBase.Infrastructure", "CsharpBase.Infrastructure\CsharpBase.Infrastructure.csproj", "{FB2806EA-80F9-4433-9F17-1DF85BC32415}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,18 +20,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{832773CF-30D3-4168-9586-CC67F414C275}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{832773CF-30D3-4168-9586-CC67F414C275}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{832773CF-30D3-4168-9586-CC67F414C275}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{832773CF-30D3-4168-9586-CC67F414C275}.Release|Any CPU.Build.0 = Release|Any CPU
-		{321D4E07-7CF3-431D-BE1C-53EF60D10FEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{321D4E07-7CF3-431D-BE1C-53EF60D10FEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{321D4E07-7CF3-431D-BE1C-53EF60D10FEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{321D4E07-7CF3-431D-BE1C-53EF60D10FEC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1449092D-60E4-4883-9D6C-9191483BF29C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1449092D-60E4-4883-9D6C-9191483BF29C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1449092D-60E4-4883-9D6C-9191483BF29C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1449092D-60E4-4883-9D6C-9191483BF29C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E85A54A6-93BE-4AB6-A623-E3441E144228}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E85A54A6-93BE-4AB6-A623-E3441E144228}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E85A54A6-93BE-4AB6-A623-E3441E144228}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E85A54A6-93BE-4AB6-A623-E3441E144228}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81191761-B7D1-4A8D-983E-76C8DC41529D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81191761-B7D1-4A8D-983E-76C8DC41529D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81191761-B7D1-4A8D-983E-76C8DC41529D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81191761-B7D1-4A8D-983E-76C8DC41529D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB2806EA-80F9-4433-9F17-1DF85BC32415}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB2806EA-80F9-4433-9F17-1DF85BC32415}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB2806EA-80F9-4433-9F17-1DF85BC32415}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB2806EA-80F9-4433-9F17-1DF85BC32415}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

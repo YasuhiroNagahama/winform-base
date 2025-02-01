@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WinFormBase.Infrastructure\Base.Infrastructure.csproj" />
+    <ProjectReference Include="..\CsharpBase.Infrastructure\CsharpBase.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

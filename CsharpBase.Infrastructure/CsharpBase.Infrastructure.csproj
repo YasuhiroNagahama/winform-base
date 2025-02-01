@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WinFormBase.Domain\Base.Domain.csproj" />
+    <ProjectReference Include="..\CsharpBase.Domain\CsharpBase.Domain.csproj" />
   </ItemGroup>
 
 </Project>
