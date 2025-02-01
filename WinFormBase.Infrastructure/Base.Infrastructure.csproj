@@ -7,8 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Printer\" />
-    <Folder Include="Barcode\" />
+    <Compile Remove="Barcode\**" />
+    <Compile Remove="Printer\**" />
+    <EmbeddedResource Remove="Barcode\**" />
+    <EmbeddedResource Remove="Printer\**" />
+    <None Remove="Barcode\**" />
+    <None Remove="Printer\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WinFormBase.Domain\WinFormBase.Domain.csproj" />
+    <ProjectReference Include="..\WinFormBase.Domain\Base.Domain.csproj" />
   </ItemGroup>
 
 </Project>
