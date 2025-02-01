@@ -11,11 +11,11 @@ public partial class BaseView : Form
 
     protected void Bind(FormViewModelBase viewModelBase)
     {
-        this.StatusProgress.DataBindings.Add(nameof(StatusProgress.Value), viewModelBase, nameof(viewModelBase.StatusProgressValue));
-        this.StatusProgress.DataBindings.Add(nameof(StatusProgress.Maximum), viewModelBase, nameof(viewModelBase.StatusProgressMaximum));
-        this.StatusProgress.DataBindings.Add(nameof(StatusProgress.Minimum), viewModelBase, nameof(viewModelBase.StatusProgressMinimum));
-        this.StatusProgress.DataBindings.Add(nameof(StatusProgress.Style), viewModelBase, nameof(viewModelBase.StatusProgressStyle));
-        this.StatusProgress.DataBindings.Add(nameof(StatusProgress.Visible), viewModelBase, nameof(viewModelBase.StatusProgressVisible));
+        this.StatusProgress.DataBindings.Add(nameof(this.StatusProgress.Value), viewModelBase, nameof(viewModelBase.StatusProgressValue));
+        this.StatusProgress.DataBindings.Add(nameof(this.StatusProgress.Maximum), viewModelBase, nameof(viewModelBase.StatusProgressMaximum));
+        this.StatusProgress.DataBindings.Add(nameof(this.StatusProgress.Minimum), viewModelBase, nameof(viewModelBase.StatusProgressMinimum));
+        this.StatusProgress.DataBindings.Add(nameof(this.StatusProgress.Style), viewModelBase, nameof(viewModelBase.StatusProgressStyle));
+        this.StatusProgress.DataBindings.Add(nameof(this.StatusProgress.Visible), viewModelBase, nameof(viewModelBase.StatusProgressVisible));
 
         this.StatusLabel.DataBindings.Add(nameof(this.StatusLabel.Text), viewModelBase, nameof(viewModelBase.StatusLableText));
 
