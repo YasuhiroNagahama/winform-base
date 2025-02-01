@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{962DE311-1E83-4952-A876-D5258232CE22}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CsharpBase.Domain", "CsharpBase.Domain\CsharpBase.Domain.csproj", "{E85A54A6-93BE-4AB6-A623-E3441E144228}"
